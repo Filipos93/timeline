@@ -7,10 +7,13 @@ body{
 	width: 100vw;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	// padding: 0 50px;
 }
 
 #timeline{
-	width: 100%;
+	position: relative;
+	width: 80%;
 	height: 19px;
 	background-color: $primary-color;
 	display: flex;
@@ -23,6 +26,8 @@ body{
 		height: 11px;
 		background: $gradient;
 		border-radius: $border-radius;
+		position: absolute;
+		z-index: 1;
 	}
 
 	.event{
@@ -37,6 +42,8 @@ body{
 		color: $white;
 		box-sizing: border-box;
 		transition: all 200ms ease;
+		position: absolute;
+		z-index: 2;
 
 		&.past{
 			background: $gradient;

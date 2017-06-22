@@ -7,10 +7,12 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 #timeline {
-  width: 100%;
+  position: relative;
+  width: 80%;
   height: 19px;
   background-color: #122244;
   display: flex;
@@ -21,7 +23,9 @@ body {
     width: 200px;
     height: 11px;
     background: linear-gradient(to bottom, #84d0f1 0%, #427ca1 100%);
-    border-radius: 4px; }
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1; }
   #timeline .event {
     display: flex;
     justify-content: center;
@@ -33,7 +37,9 @@ body {
     font-size: 18px;
     color: #fff;
     box-sizing: border-box;
-    transition: all 200ms ease; }
+    transition: all 200ms ease;
+    position: absolute;
+    z-index: 2; }
     #timeline .event.past {
       background: linear-gradient(to bottom, #84d0f1 0%, #427ca1 100%);
       border: 4px solid #122244;
