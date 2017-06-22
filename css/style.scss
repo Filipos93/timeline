@@ -1,0 +1,63 @@
+body{
+	background-color: #fff;
+}
+
+.container{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+}
+
+#timeline{
+	width: 100%;
+	height: 19px;
+	background-color: $primary-color;
+	display: flex;
+	align-items: center;
+	padding: 0 4px 0 4px;
+	border-radius: $border-radius;
+
+	.progress-bar{
+		width: 200px;
+		height: 11px;
+		background: $gradient;
+		border-radius: $border-radius;
+	}
+
+	.event{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 37px;
+		height: 37px;
+		border-radius: 100%;
+		background-color: $primary-color;
+		font-size: $icon-size;
+		color: $white;
+		box-sizing: border-box;
+		transition: all 200ms ease;
+
+		&.past{
+			background: $gradient;
+			border: 4px solid $primary-color;
+			transition: none;
+			box-shadow: inset 0px 8px 4px -7px rgb(255, 255, 255);
+
+			span{
+				color: $primary-color;
+			}
+		}
+
+		&:hover{
+			border: 4px solid $primary-color;
+			background: $hover-color;
+			box-shadow: inset 0px 8px 4px -7px rgb(255, 255, 255);
+			cursor: pointer;
+
+			span{
+				color: $white;
+			}
+		}
+	}
+}
