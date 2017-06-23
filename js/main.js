@@ -2,6 +2,7 @@ $(function(){
 
 	var eventArray = [
 		[new Date(2015, 6, 15), "lorem ipsum dolor sit", "fa-heart"],
+		[new Date(2015, 6, 2), "lorem ipsum dolor sit", "fa-heart"],
 		[new Date(2015, 6, 16), "Event 3", "fa-heart"],
 		[new Date(2015, 6, 3), "Event 2", "fa-heart"],
 		[new Date(2015, 6, 1), "Event 2", "fa-heart"],
@@ -15,6 +16,7 @@ $(function(){
 	var actualMonth = today.getMonth();
 	var barLength = $('#timeline').width();
 	var oneDay = barLength / 30;
+	$("#timeline").width(function(i, w) { return w - oneDay; });
 
 	$('.progress-bar').width(oneDay*actualDay);
 
@@ -34,13 +36,8 @@ $(function(){
 				}
 
 				$eventToAppend.appendTo('#timeline');
-
-				if(dayOfMonth==1){
-					$eventToAppend.css("left", -Math.abs($eventToAppend.width()/2));
-				}
-				else{
-					$eventToAppend.css("left", (oneDay * dayOfMonth) - ($eventToAppend.width()/2) );
-				}
+				$eventToAppend.css("left", (oneDay * (dayOfMonth -1)) - ($eventToAppend.width()/2) );
+				
 			}
 		}
 	}
