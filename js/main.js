@@ -26,6 +26,8 @@ $(function(){
 				var dayToPrint = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;
 
 				$eventToAppend = $('<div class="event"><span class="fa ' + array[i][2] + '"></span><div class="tooltip"><p class="date">' + dayToPrint + '.' + eventDate.getMonth() + '.' + eventDate.getFullYear() + '</p><p class="name">' + array[i][1] + '</p></div></div>');
+
+				$eventToAppend.css("order", dayOfMonth);
 				
 				if(actualDay >= dayOfMonth){
 					$eventToAppend.addClass('past');

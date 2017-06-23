@@ -1,0 +1,50 @@
+@media screen and (max-width: 480px) {
+
+	.container{
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding-top: 32px;
+    	padding-left: 17px;
+	}
+	
+	#timeline{
+		background-color: rgba(0, 0, 0, 0);
+		width: auto;
+		height: auto;
+		flex-direction: column;
+
+		.progress-bar{
+			display: none;
+		}
+
+		.event{
+			position: relative;
+			left: 0 !important;
+			margin-bottom: 15px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			.tooltip{
+				display: block;
+				top: -5px;
+				left: 41px;
+				border: none;
+				text-align: left;
+				width: 70vw;
+				height: 37px;
+
+				&:before, &:after{
+					display: none;
+				}
+
+				.date{
+					border: none;
+					padding-bottom: 0px;
+					margin-bottom: -7px;
+				}
+			}
+		}
+	}
+}
