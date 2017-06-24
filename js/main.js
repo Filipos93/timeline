@@ -2,12 +2,12 @@ $(function(){
 
 	var eventArray = [
 		[new Date(2015, 6, 15), "lorem ipsum dolor sit", "fa-heart"],
-		[new Date(2015, 6, 2), "lorem ipsum dolor sit", "fa-heart"],
-		[new Date(2015, 6, 16), "Event 3", "fa-heart"],
-		[new Date(2015, 6, 3), "Event 2", "fa-heart"],
-		[new Date(2015, 6, 1), "Event 2", "fa-heart"],
-		[new Date(2015, 6, 30), "Event 2", "fa-heart"],
-		[new Date(2015, 7, 30), "Event 2", "fa-heart"]
+		[new Date(2015, 6, 2), "Event1", "fa-camera"],
+		[new Date(2015, 6, 16), "other event", "fa-podcast"],
+		[new Date(2015, 6, 3), "Event 1337", "fa-bell-o"],
+		[new Date(2015, 6, 1), "Event 500", "fa-bus"],
+		[new Date(2015, 6, 30), "Asdf", "fa-heart"],
+		[new Date(2015, 7, 30), "Sleep", "fa-bed"]
 
 	];
 
