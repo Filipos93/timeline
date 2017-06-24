@@ -16,6 +16,7 @@ $(function(){
 	var actualMonth = today.getMonth();
 	var barLength = $('#timeline').width();
 	var oneDay = barLength / 30;
+	
 	$("#timeline").width(function(i, w) { return w - oneDay; });
 
 	$('.progress-bar').width(oneDay*actualDay);
@@ -41,13 +42,23 @@ $(function(){
 			}
 		}
 	}
+
+	function checkSize(){
+		if ($("#timeline").css("flex-direction") != "column" ){
+			
+			$('.event').hover(function(){
+				$(this).children('.tooltip').fadeIn(200);
+			}, 
+			function(){
+				$(this).children('.tooltip').fadeOut(200);
+			});
+		}
+	}
 	
 	appendEvents(eventArray);
+	checkSize();
+	$(window).resize(checkSize);
 
-	$('.event').hover(function(){
-		$(this).children('.tooltip').fadeIn(200);
-	}, function(){
-		$(this).children('.tooltip').fadeOut(200);
-	});
+	
 
 });
